@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { ArrowRight, Check, Clock, Gift, Heart, Leaf, MapPin, Phone, Star, Truck } from "lucide-react";
-import heroImg from "@/assets/saboreo-hero.jpg";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import boxImg from "@/assets/saboreo-box.jpg";
 import craftImg from "@/assets/saboreo-craft.jpg";
 import giftImg from "@/assets/saboreo-gift.jpg";
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Saboreo — Chocolate-Dipped Strawberries, Delivered Same-Day in Zurich" },
       { name: "description", content: "Handcrafted chocolate-covered strawberries delivered the same day in Zurich. Build your box, gift with a handwritten note. From CHF 45." },
-      { property: "og:image", content: heroImg },
+      
     ],
   }),
   component: HomePage,
@@ -46,12 +46,14 @@ function Nav() {
 function Hero() {
   return (
     <section id="top" className="relative min-h-screen overflow-hidden bg-cacao text-cream">
-      <img
-        src={heroImg}
-        alt="Strawberry hand-dipped in dark chocolate with gold leaf"
+      <video
+        src={heroVideo.url}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
         className="absolute inset-0 h-full w-full object-cover opacity-80"
-        width={1600}
-        height={1200}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-[#1a0e08]/95 via-[#1a0e08]/70 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#1a0e08] via-transparent to-transparent" />
