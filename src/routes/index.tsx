@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Saboreo — Chocolate-Dipped Strawberries, Delivered Same-Day in Zurich" },
       { name: "description", content: "Handcrafted chocolate-covered strawberries delivered the same day in Zurich. Build your box, gift with a handwritten note. From CHF 45." },
-      { property: "og:image", content: heroImg },
+      { property: "og:image", content: "/__l5e/assets-v1/53f6eebb-e63b-4466-aca0-a10e82d0f183/hero-video.mp4" },
     ],
   }),
   component: HomePage,
